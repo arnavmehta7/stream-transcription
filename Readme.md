@@ -17,7 +17,7 @@ Key features include:
 - Support for multiple concurrent transcription viewers (currently set to 2)
 - Customizable Timeouts for the transcription process (like process first 10 minutes of the video)
 
-## User Configuration:
+## Information for running:
 ### Viewing with Live Transcription:
 - m3u8 url with valid stream already running
 
@@ -27,15 +27,14 @@ Key features include:
 - Stream Name
 - Then using external tools a stream can be started with the above configuration
 
-### Infra:
+## Infra:
 - Unique task id is formed for above configuration
 - Ingestor Server (receives the stream and forms m3u8 url)
 - Transcription Server (receives the m3u8 url and transcribes the video on the fly)
 - All above data is stored in a filesystem with the task id as the directory name. A set is used to store which tasks are currently running. This is used to check if the task is already running or not.
 - Asynchronously get the transcription and show it along the video stream using the HLS medium.
 
-
-## Running Server
+## Running the Server
 To run the server, first of all clone the repo, make sure docker is installed and just run the following commands:
 ```bash
 cd server
@@ -43,7 +42,7 @@ sudo sh start-docker.sh
 ```
 This will setup the server which will be available at your http://localhost:80
 
-## Running Client
+## Running the Client
 To run the client, first of all clone the repo, make sure nodejs, pnpm is installed and just run the following commands:
 ```bash
 cd transcription-app
