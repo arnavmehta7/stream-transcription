@@ -1,6 +1,22 @@
 ## Generate Live Transcript of any stream on Thetacloud
 
 
+## What it does?
+This project enables real-time transcription of live video streams on Thetacloud. It consists of two main components:
+
+1. A server that handles stream ingestion, transcription, and data storage.
+2. A client application that displays the live video stream alongside its real-time transcription.
+
+Key features include:
+
+- Live transcription of ongoing streams using a provided m3u8 URL
+- Ability to start new streams with Thetacloud account credentials
+- Asynchronous processing of video streams for transcription
+- Storage of transcription data in a filesystem, organized by unique task IDs
+- Real-time display of video and transcription using HLS (HTTP Live Streaming)
+- Support for multiple concurrent transcription viewers (currently set to 2)
+- Customizable Timeouts for the transcription process (like process first 10 minutes of the video)
+
 ## User Configuration:
 ### Viewing with Live Transcription:
 - m3u8 url with valid stream already running
