@@ -120,7 +120,7 @@
     <div class="mb-4">
         <label for="saId" class="block mb-2">Service Account ID:</label>
         <input
-            type="text"
+            type="password"
             id="saId"
             bind:value={saId}
             class="w-full p-2 border rounded"

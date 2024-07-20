@@ -4,8 +4,7 @@ from fastapi import FastAPI, BackgroundTasks
 from fastapi.responses import StreamingResponse
 import os
 import time
-import threading
-from server.transcription.create_transcription import transcribe_video
+from transcription.create_transcription import transcribe_video
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 

@@ -11,12 +11,12 @@ def open_stream(stream, direct_url, preferred_quality):
                 .output("pipe:", format="s16le", acodec="pcm_s16le", ac=1, ar=SAMPLE_RATE)
                 .run_async(pipe_stdout=True)
             )
-            ffplay_cmd = [
-                "ffplay",
-                "-nodisp",
-                "-autoexit",
-                "-i", stream
-            ]
+            # ffplay_cmd = [
+            #     "ffplay",
+            #     "-nodisp",
+            #     "-autoexit",
+            #     "-i", stream
+            # ]
             # ffplay_process = subprocess.Popen(ffplay_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 
         except ffmpeg.Error as e:

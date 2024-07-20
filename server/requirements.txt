@@ -1,0 +1,8 @@
+openai-whisper
+transformers
+ffmpeg
+torch
+torchaudio
+fastapi[all]
+uvicorn
+streamlink
