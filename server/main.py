@@ -92,6 +92,10 @@ async def get_transcript(task_id: str):
 
     return StreamingResponse(transcript_stream(), media_type="text/event-stream")
 
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the transcription server, go to /docs to see the API documentation."}
+
 # Run the app with: uvicorn main:app --reload
 if __name__ == "__main__":
     import uvicorn

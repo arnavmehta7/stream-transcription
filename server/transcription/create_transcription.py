@@ -52,7 +52,7 @@ def transcribe_video(url,language=None, interval=2, history_buffer_size=0, prefe
         vad = VAD()
 
     print("Opening stream...")
-    ffmpeg_process, streamlink_process = open_stream(url, direct_url, preferred_quality)
+    ffmpeg_process, streamlink_process = open_stream(url)
 
     # def handler(signum, frame):
     #     ffmpeg_process.kill()
