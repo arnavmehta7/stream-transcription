@@ -34,7 +34,7 @@ def get_task_base_dir_path(task_id: str):
 def update_transcript_from_input(task_id: str, m3u8_url: str, max_task_duration: int):
     s = time.time()
     transcript_path = os.path.join(get_task_base_dir_path(task_id), "transcript.txt")
-    for transcript in transcribe_video(m3u8_url, direct_url=True, language="en"):
+    for transcript in transcribe_video(m3u8_url, language="en"):
         print(">>>> transcript", transcript)
         e = time.time()
         if e - s >= max_task_duration:

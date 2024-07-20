@@ -39,8 +39,7 @@ def transcribe_audio_using_hf_model(pipe, file_name: str):
 model = load_normal_whisper()
 
 
-def transcribe_video(url,language=None, interval=2, history_buffer_size=0, preferred_quality="audio_only",
-         use_vad=True, direct_url=True, **decode_options):
+def transcribe_video(url,language=None, interval=2, history_buffer_size=0, use_vad=True, **decode_options):
 
     n_bytes = interval * SAMPLE_RATE * 2  # Factor 2 comes from reading the int16 stream as bytes
     audio_buffer = RingBuffer((history_buffer_size // interval) + 1)

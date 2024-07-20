@@ -100,14 +100,14 @@
 </script>
 
 <svelte:head>
-	<title>Live Stream Transcription</title>
+	<title>Theta Streaming</title>
 </svelte:head>
 
 <main class="container mx-auto p-4">
-	<h1 class="text-3xl font-bold mb-4">Live Stream Transcription</h1>
+	<h1 class="text-3xl font-bold mb-4">Live Stream Transcription with ThetaCloud</h1>
 
 	<div class="mb-4">
-		<label for="m3u8Url" class="block mb-2">M3U8 URL:</label>
+		<label for="m3u8Url" class="block mb-2">M3U8 URL running on theta:</label>
 		<input
 			type="text"
 			id="m3u8Url"
