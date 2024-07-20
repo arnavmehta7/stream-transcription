@@ -1,7 +1,8 @@
 openai-whisper
 transformers
-ffmpeg
+ffmpeg-python
 torch
+faster_whisper
 torchaudio
 fastapi[all]
 uvicorn

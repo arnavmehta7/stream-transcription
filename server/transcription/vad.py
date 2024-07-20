@@ -8,7 +8,7 @@ class VAD:
     def __init__(self):
         import os
         print(f">> files: {os.listdir()}")
-        self.model = init_jit_model("server/transcription/silero_vad.jit")
+        self.model = init_jit_model("transcription/silero_vad.jit")
 
     def no_speech(self, audio):
         speech = get_speech_timestamps(torch.Tensor(audio), self.model, return_seconds=True)

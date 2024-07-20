@@ -134,13 +134,14 @@
 					class="w-full aspect-video"
 				></video>
 			</div>
-		{/if}
 
 		<div class="w-1/2 pl-2">
 			<h2 class="text-xl font-semibold mb-2">Live Transcript:</h2>
 			<pre
 				class="bg-gray-100 p-4 rounded h-[400px] overflow-y-auto whitespace-pre-wrap">{transcript}</pre>
 		</div>
+		{/if}
+
 	</div>
 
 	<div class="my-4">

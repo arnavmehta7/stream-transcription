@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # RUN python -m "from whisper import load_model; load_model('small')"
 RUN python -c "from whisper import load_model; load_model('small')"
 
-RUN pip install faster_whisper
+RUN apt-get update && apt-get install -y ffmpeg
 # Copy the current directory contents into the container at /app
 COPY . /app
 
