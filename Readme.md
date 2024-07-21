@@ -47,6 +47,15 @@ To run the client, first of all clone the repo, make sure nodejs, pnpm is instal
 ```bash
 cd transcription-app
 pnpm i
+```
+Create a .env file in the root of the transcription-app folder and add the following:
+```bash
+VITE_API_URL=http://<URL>
+```
+
+Then run the following command:
+```bash
 pnpm run dev
 ```
+
 NOTE: you can also use `npm` instead of `pnpm`. But `pnpm` is recommended for faster installation and better caching.

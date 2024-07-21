@@ -19,7 +19,7 @@ app.add_middleware(
 )
 # Directory to store transcripts and translations
 DATA_DIR = "data"
-MAX_TASK_DURATION = 5 * 10 # 5 min
+MAX_TASK_DURATION = 10 * 60 # 10 min
 os.makedirs(DATA_DIR, exist_ok=True)
 
 # Dictionary to track active tasks
