@@ -119,11 +119,18 @@
 
 	<button
 		on:click={startTranscription}
-		class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+		class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
 	>
 		Start Transcription
 	</button>
 
+	{#if !transcript && m3u8Url  && taskId}
+		<div class="mt-4 flex justify-center items-center">
+			<p class="text-md font-semibold">
+				Processing... Please wait for the transcript to be generated. 
+				Wait upto max of 20 seconds, it's deployed on a small server</p>
+		</div>
+	{/if}
 	<div class="mt-4 flex">
 		{#if m3u8Url}
 			<div class="w-1/2 pr-2">
@@ -141,10 +148,15 @@
 				class="bg-gray-100 p-4 rounded h-[400px] overflow-y-auto whitespace-pre-wrap">{transcript}</pre>
 		</div>
 		{/if}
-
 	</div>
 
 	<div class="my-4">
 		Task Id: {taskId}
 	</div>
+	<div class="mt-8 flex justify-bottom items-center">
+		<p class="text-sm font-semibold">
+			This stream will run by backend for a maximum of 10 minutes before timeout to save costs and prevent overload
+		</p>
+	</div>
+
 </main>
