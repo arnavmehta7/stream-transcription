@@ -37,6 +37,7 @@ def transcribe_audio_using_hf_model(pipe, file_name: str):
 
 
 model = load_normal_whisper()
+# model = load_faster_whisper()
 
 
 def transcribe_video(url,language=None, interval=2, history_buffer_size=0, use_vad=True, **decode_options):
@@ -116,12 +117,12 @@ def transcribe_video(url,language=None, interval=2, history_buffer_size=0, use_v
             # new_prefix = decoded_text
             
             
-            previous_text.append(new_prefix)
+            # previous_text.append(new_prefix)
 
             if clear_buffers or previous_text.has_repetition():
                 audio_buffer.clear()
                 previous_text.clear()
-                
+            print(f">>> inference time: {end-start} seconds")
             # print(f'{datetime.now().strftime("%H:%M:%S")} {decoded_language} {decoded_text}, time taken: {end-start} seconds')
             yield f'{datetime.now().strftime("%H:%M:%S")} {decoded_text}\n'
 

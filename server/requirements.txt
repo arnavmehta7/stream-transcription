@@ -7,3 +7,4 @@ torchaudio
 fastapi[all]
 uvicorn
 streamlink
+--extra-index-url https://download.pytorch.org/whl/cpu
